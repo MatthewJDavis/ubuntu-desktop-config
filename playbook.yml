@@ -1,0 +1,26 @@
+---
+- name: run playbook to configure Ubuntu desktop
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Install Git
+    apt:
+      name: git
+      state: present
+      update_cache: yes
+
+  # Install VSCode
+  - name: Add MS key to trusted
+    apt_key:
+      url: "https://packages.microsoft.com/keys/microsoft.asc"
+      state: present
+  - name: Add MS repo to list
+    apt_repository:
+      repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+      filename: vscode
+      state: present
+      update_cache: yes
+  - name: install vscode
+    apt:
+      name: code
+      state: present
