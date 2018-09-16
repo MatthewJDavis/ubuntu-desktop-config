@@ -24,3 +24,10 @@
     apt:
       name: code
       state: present
+  
+  #Install Pip 3
+  - name: install Python pip 3
+    apt:
+    name: python3-pip
+    state: present
+    update_cache: yes
