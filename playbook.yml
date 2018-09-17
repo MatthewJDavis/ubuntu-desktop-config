@@ -31,3 +31,10 @@
       name: python3-pip
       state: present
       update_cache: yes
+  
+  #Install Chromium browser
+  - name: Install chromium browser
+    apt:
+      name: chromium-browser
+      state: present
+      update_cache: yes
