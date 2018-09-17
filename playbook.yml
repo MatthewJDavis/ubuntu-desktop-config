@@ -38,3 +38,10 @@
       name: chromium-browser
       state: present
       update_cache: yes
+
+  # Install restricted extras
+  - name: Install restricted extras
+    apt:
+      name: ubuntu-restricted-extras
+      state: present
+      update_cache: yes
