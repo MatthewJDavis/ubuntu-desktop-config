@@ -45,3 +45,10 @@
       name: ubuntu-restricted-extras
       state: present
       update_cache: yes
+  
+  # Install gnome tweak tool
+  - name: Install Gnome tweak tool
+    apt:
+      name: gnome-tweak-tool
+      state: present
+      update_cache: yes
