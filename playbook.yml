@@ -52,6 +52,13 @@
       name: gnome-tweak-tool
       state: present
       update_cache: yes
+  
+  # Install Conky system monitor
+  - name: Install Conky
+    apt:
+      name: conky-all
+      state: present
+      update_cache: yes
 
   # Remove Amazon from launcher
   - name: remove Amazon from launcher
