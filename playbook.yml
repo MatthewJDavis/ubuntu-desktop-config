@@ -52,3 +52,9 @@
       name: gnome-tweak-tool
       state: present
       update_cache: yes
+
+  # Remove Amazon from launcher
+  - name: remove Amazon from launcher
+    apt:
+      name: ubuntu-web-launchers
+      purge: yes
