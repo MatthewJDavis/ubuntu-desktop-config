@@ -9,5 +9,8 @@ Set up for new Ubuntu desktop - tested on 18.04
 
 ```bash
 # Run with K for sudo password prompt
-ansible-playbook playbook.yml -K
+ansible-playbook playbook.yml -K -e 'user=username'
+
+# Use environment variable if using current logged in user to run docker
+ansible-playbook playbook.yml -K -e "user=$USER"
 ```
