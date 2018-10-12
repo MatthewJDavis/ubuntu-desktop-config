@@ -99,3 +99,9 @@
       name: "{{ user }}"
       groups: docker
       append: yes
+
+  - name: install terminator terminal
+    apt:
+      name: terminator
+      state: present
+      update_cache: yes
