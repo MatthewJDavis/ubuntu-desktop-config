@@ -105,3 +105,6 @@
       name: terminator
       state: present
       update_cache: yes
+      
+ - name: change touchpad sensitivity
+  command: xinput --set-prop 13 "Synaptics Finger" 50 80 257
